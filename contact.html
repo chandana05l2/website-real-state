@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact</title>
+  <link rel="stylesheet" href="contact.css" />
+  <style>
+    .alert {
+      padding: 10px;
+      margin-top: 15px;
+      border-radius: 4px;
+    }
+    .alert-success {
+      background-color: #d4edda;
+      color: #155724;
+    }
+    .alert-danger {
+      background-color: #f8d7da;
+      color: #721c24;
+    }
+  </style>
+</head>
+<body>
+<header>
+  <div class="navbar">
+    <div class="logo">Real Estate</div>
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="appartments.html">Appartment</a></li>
+      <li><a href="pricing.html">Pricing</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+</header>
+
+<section class="contact-header">
+  <small>Contact Us</small>
+  <h2>Get Help & Friendly Support</h2>
+</section>
+
+<section class="contact-form-container">
+  <h3>Fill up the Form</h3>
+  <form id="contactForm">
+    <div class="form-row">
+      <div class="form-half">
+        <input type="text" name="from_name" placeholder="Name" required />
+      </div>
+      <div class="form-half">
+        <input type="email" name="from_email" placeholder="Email" required />
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-full">
+        <input type="text" name="subject" placeholder="Subject" required />
+      </div>
+    </div>
+    <div class="form-row">
+      <div class="form-full">
+        <textarea name="message" placeholder="Your Message" required></textarea>
+      </div>
+    </div>
+    <button class="submit-btn" type="submit">Submit Request</button>
+    <div id="response"></div>
+  </form>
+</section>
+
+<script src="https://cdn.jsdelivr.net/npm/emailjs-com@3/dist/email.min.js"></script>
+<script>
+  // Initialize EmailJS
+  (function () {
+    emailjs.init("fnN7FRMYWvSBx5yyj"); // Replace with your actual EmailJS public key
+  })();
+
+  // Add event listener to form
+  document.getElementById("contactForm").addEventListener("submit", function (e) {
+    e.preventDefault();
+
+    emailjs.sendForm("service_atmnw5t", "template_f11nmdp", this).then(
+      function () {
+        document.getElementById("response").innerHTML =
+          '<div class="alert alert-success">Message sent successfully!</div>';
+        document.getElementById("contactForm").reset();
+      },
+      function (error) {
+        document.getElementById("response").innerHTML =
+          '<div class="alert alert-danger">Failed to send message: ' +
+          error.text +
+          "</div>";
+      }
+    );
+  });
+</script>
+
+<!-- navabar -->
+
+  <script>
+  function toggleMenu() {
+    const nav = document.querySelector('.nav-links');
+    nav.classList.toggle('active');
+  }
+</script>
+
+
+</body>
+</html>

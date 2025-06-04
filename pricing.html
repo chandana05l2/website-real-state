@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Home</title>
+  <link rel="stylesheet" href="pricing.css" />
+</head>
+<body>
+<header>
+  <div class="navbar">
+    <div class="logo">Real Estate</div>
+    <div class="hamburger" onclick="toggleMenu()">☰</div>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="services.html">Services</a></li>
+      <li><a href="appartments.html">Appartment</a></li>
+      <li><a href="pricing.html">Pricing</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </div>
+</header>
+
+<section class="hero-section">
+    <div class="hero-content">
+      <p>30 days money back Guarantee</p>
+      <h1>No Extra Fees . Frindly Support</h1>
+    </div>
+  </section>
+
+  <section class="pricing-section">
+
+  <!-- Basic Plan -->
+  <div class="pricing-card">
+    <div class="plan-title">Basic</div>
+    <div class="plan-price">₹2500</div>
+    <div class="plan-subtext">per user, per month</div>
+    <ul class="feature-list">
+      <li><span class="check">✔</span>99.5% Uptime Guarantee</li>
+      <li><span class="check">✔</span>120GB CDN Bandwidth</li>
+      <li><span class="check">✔</span>5GB Cloud Storage</li>
+      <li><span class="cross">✖</span>Personal Help Support</li>
+      <li><span class="cross">✖</span>Enterprise SLA</li>
+    </ul>
+    <button class="start-btn start-basic">Start Basic</button>
+  </div>
+
+  <!-- Standard Plan -->
+  <div class="pricing-card" style="border: 2px solid #198754;">
+    <div class="highlight-tag">Best Value</div>
+    <div class="plan-title">Standard</div>
+    <div class="plan-price">₹3600</div>
+    <div class="plan-subtext">per user, per month</div>
+    <ul class="feature-list">
+      <li><span class="check">✔</span>99.5% Uptime Guarantee</li>
+      <li><span class="check">✔</span>150GB CDN Bandwidth</li>
+      <li><span class="check">✔</span>10GB Cloud Storage</li>
+      <li><span class="check">✔</span>Personal Help Support</li>
+      <li><span class="cross">✖</span>Enterprise SLA</li>
+    </ul>
+    <button class="start-btn start-standard">Start Standard</button>
+  </div>
+
+  <!-- Platinum Plan -->
+  <div class="pricing-card">
+    <div class="plan-title">Platinum</div>
+    <div class="plan-price">₹4340</div>
+    <div class="plan-subtext">2 user, per month</div>
+    <ul class="feature-list">
+      <li><span class="check">✔</span>100% Uptime Guarantee</li>
+      <li><span class="check">✔</span>200GB CDN Bandwidth</li>
+      <li><span class="check">✔</span>20GB Cloud Storage</li>
+      <li><span class="check">✔</span>Personal Help Support</li>
+      <li><span class="check">✔</span>Enterprise SLA</li>
+    </ul>
+    <button class="start-btn start-platinum">Start Platinum</button>
+  </div>
+
+</section>
+
+
+<footer class="footer">
+  <div class="footer-container">
+    <div class="footer-column">
+      <h4>LAYOUTS</h4>
+      <ul>
+        <li><a href="http://127.0.0.1:5501/index.html">Home Page</a></li>
+        <li><a href="http://127.0.0.1:5501/about.html">About Page</a></li>
+        <li><a href="http://127.0.0.1:5501/appartments.html">appartment page</a></li>
+         <li><a href="http://127.0.0.1:5501/services.html">services page</a></li>
+        <li><a href="http://127.0.0.1:5501/contact.html">Contact Page</a></li>
+      
+      </ul>
+    </div>
+
+    <div class="footer-column">
+      <h4>ALL SECTIONS</h4>
+      <ul>
+        <li><a href="#">Headers</a></li>
+        <li><a href="#">Features</a></li>
+        <li><a href="#">Attractive</a></li>
+        <li><a href="#">Footers</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-column">
+      <h4>COMPANY</h4>
+      <ul>
+        <li><a href="http://127.0.0.1:5501/about.html">About</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="http://127.0.0.1:5501/pricing.html">Pricing</a></li>
+        <li><a href="#">Affiliate</a></li>
+      </ul>
+    </div>
+    <div class="footer-column">
+      <h4>Contact</h4>
+      <ul>
+        <li><a href="http://127.0.0.1:5501/contact.html">Chandana priya</a></li>
+        <li><a href="http://127.0.0.1:5501/contact.html">email:appalachandana02@gmail.com</a></li>
+        <li><a href="http://127.0.0.1:5501/contact.html">phone no:9647437632</a></li>
+       
+      </ul>
+    </div>
+  </div>
+</footer>
+
+<script>
+  function toggleMenu() {
+    const nav = document.querySelector('.nav-links');
+    nav.classList.toggle('active');
+  }
+</script>
+  
+</body>
+</html>
